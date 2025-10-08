@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' font-size='80' text-anchor='middle' dominant-baseline='central'%3E%C3%B7%3C/text%3E%3C/svg%3E" type="image/svg+xml">
-    <link rel="readme" href="data:text/markdown;base64,CiMgU2ltcGxlIENhbGN1bGF0b3IgV2ViIEFwcAoyQSBjbGVhbiBhbmQgdXNlci1mcmllbmRseSB3ZWItYmFzZWQgY2FsY3VsYXRvciB0aGF0IHBlcmZvcm1zIGJhc2ljIGFyaXRobWV0aWMgb3BlcmF0aW9ucy4KCiMjIEZlYXR1cmVzCgogKiAgKipCYXNpYyBPcGVyYXRpb25zKio6IFN1cHBvcnRzIGFkZGl0aW9uLCBzdWJ0cmFjdGlvbiwgbXVsdGlwbGljYXRpb24sIGFuZCBkaXZpc2lvbi4KICogICoqQ2xlYW4gVUkqKjogSW50dWl0aXZlIGludGVyZmFjZSB3aXRoIGRpc3RpbmN0IGJ1dHRvbnMgZm9yIG51bWJlcnMgYW5kIG9wZXJhdGlvbnMuCiAqICAgKipSZXNwb25zaXZlIERlc2lnbkFwcGxpY2F0aW9uKio6IFdvcmtzIHdlbGwgb24gdmFyaW91cyBzY3JlZW4gc2l6ZXMgKHRob3VnaCBub3QgZXhwbGljZXRseSByZXNwb25zaXZlLCBiYXNpYyBDU1Mgc2hvdWxkIGhhbmRsZSkuCiAqICAgKipFcnJvciBIYW5kbGluZyoqOiBEaXNwbGF5cyAiRXJyb3IiIGZvciBpbnZhbGlkIG9wZXJhdGlvbnMgbGlrZSBkaXZpc2lvbiBieSB6ZXJvLgogKiAgKipTaW5nbGUtUGFnZSBBcHBsaWNhdGlvbiAqKjogQWxsIGNvZGUgKEhUTUwsIENTUywgSmF2YVNjcmlwdCkgZXMgaGVsZCB3aXRoaW4gYSBzaW5nbGUgSFRNTCBmaWxlIGZvciBlYXN5IGRlcGxveW1lbnQuCgoyIyBIb3cgdG8gVXNlCgoxLiAgKipFbnRlciBOdW1iZXJzKio6IENsaWNrIHRoZSBudW1iZXIgYnV0dG9ucyAoMC05KSB0byBpbnB1dCB5b3VyIGRlc2lyZWQgbnVtYmVycy4KMi4gICoqU2VsZWN0IE9wZXJhdGlvbiAqKjogQ2xpY2sgb24gdGhlIG9wZXJhdG9yIGJ1dHRvbnMgKCsuLCAtLCAuLCAuKSAuKCB0byBjaG9vc2UgeW91ciBhcmkudGhtZXRpYyBvcGVyYXRpb24uCjMuICAgKipDYWxjdWxhdGUgUmVzdWx0Kio6IENsaWNrIHRoZSAiPSIgYnV0dG9uIHRvIHNlZSB0aGUgcmVzdWx0IG9mIHlvdXIgY2FsY3VsYXRpb24uCjQuICAgKipDbGVhciBEaXNwbGF5Kio6IFVzZSB0aGUgIkMiIGJ1dHRvbiB0byBjbGVhciB0aGUgY3VycmVudCBpbnB1dCBhbmQgcmVzZXQgdGhlIGNhbGN1bGF0b3IuCjUuICAgKipEZWxldGUgTGFzdCBEaWdpdCoqOiBVc2UgdGhlICJERUwiIGJ1dHRvbiB0byByZW1vdmUgdGhlIGxhc3QgZW50ZXJlZCBkaWdpdC4KNi4gICoqRGVjaW1hbCBJbnB1dCoqOiBVc2UgdGhlICIuIiBidXR0b24gdG8gYWRkIGEgZGVjaW1hbCBwb2ludCB0byB5b3VyIG51bWJlcnMuCgoyKipFeGFtcGxlczpqKioKKiAgYDggKyAzID1gIHdpbGwgd2lsbCBkaXNwbGF5IGAzYAogKiAgYDEwIOQgMCA9YCB3aWxsIGRpc3BsYXkgYEVycm9yYAogKiAgYDcgLSAyID1gIHdpbGwgd2lsbCBkaXNwbGF5IGA1YAogKiAgYDQg4CA2ID1gIHdpbGwgd2lsbCBkaXNwbGF5IGAyNAogKiAgYDggKyA9YCB3aWxsIGRpc3BsYXkgYDE2YCAocmVwZWF0cyB0aGUgbGFzdCBvcGVyYW5kIGZvciBzdWJzZXF1ZW50IGNhbGN1bGF0aW9ucykKKiAgYDggKyAzIOAgPSA+YCB3aWxsIGRpc3BsYXkgYDY0YCAoZXZhbHVhdGVzIGAoOCszKSAqICg4KzMpYCBhcyBpdCByZXBlYXRzIHRoZSBsYXN0IG9wZXJhbmQgZm9yIHRoZSBzdWJzZXF1ZW50IGNhbGN1bGF0aW9ucykKCiMjIERldmVsb3BtZW50CgpUaGlzIGFwcGxpY2F0aW9uIGlzIGJ1aWx0IHVzaW5nIHN0YW5kYXJkIHdlYiB0ZWNobm9sb2dpZXM6IEhUTUwsIENTUywgYW5kIEphdmFTY3JpcHQuIEl0IGlzIGRlc2lnbmVkIGFzIGEgc2luZ2xlLCBzZWxmLWNvbnRhaW5lZCBIVE1MIGZpbGUgZm9yIG1heGltdW0gcG9ydGFiaWxpdHkgYW5kIGVhc2Ugb2YgZGVwbG95bWVudC4KCjIjIExpY2Vuc2UKClRoaXMgcHJvamVjdCBpcyBvcGVuLXNvdXJjZSBhbmQgYXZhaWxhYmxlIHVuZGVyIHRoZCBNSVQgTGljZW5zZS4K">
+    <link rel="readme" href="data:text/markdown;base64,CiMgU2ltcGxlIENhbGN1bGF0b3IgV2ViIEFwcAoyQSBjbGVhbiBhbmQgdXNlci1mcmllbmRseSB3ZWItYmFzZWQgY2FsY3VsYXRvciB0aGF0IHBlcmZvcm1zIGJhc2ljIGFyaXRobWV0aWMgb3BlcmF0aW9ucywgc3F1YXJlIHJvb3QsIGFuZCBwZXJjZW50YWdlIGNhbGN1bGF0aW9ucy4KCiMjIEZlYXR1cmVzCgogKiAgKipCYXNpYyBPcGVyYXRpb25zKio6IFN1cHBvcnRzIGFkZGl0aW9uLCBzdWJ0cmFjdGlvbiwgbXVsdGlwbGljYXRpb24sIGFuZCBkaXZpc2lvbi4KICogICoqQWR2YW5jZWQgT3BlcmF0aW9ucyoqOiBJbmNsdWRlcyBzcXVhcmUgcm9vdCAo4oiaK2FuZCBwZXJjZW50YWdlICUoKSBjYWxjdWxhdGlvbnMuCiAqICAgKipDbGVhbiBVSSoqOiBJbnR1aXRpdmUgaW50ZXJmYWNlIHdpdGggZGlzdGluY3QgYnV0dG9ucyBmb3IgbnVtYmVycyBhbmQgb3BlcmF0aW9ucy4KICogICoqUmVzcG9uc2l2ZSBEZXNpZ25BcHBsaWNhdGlvbioqOiBXb3JrcyB3ZWxsIG9uIHZhcmlvdXMgc2NyZWVuIHNpemVzICh0aG91Z2ggbm90IGV4cGxpY2l0bHkgcmVzcG9uc2l2ZSwgYmFzaWMgQ1NTIHNob3VsZCBoYW5kbGUpLgogKiAgKipFcnJvciBIYW5kbGluZyoqOiBEaXNwbGF5cyAiRXJyb3IiIGZvciBpbnZhbGlkIG9wZXJhdGlvbnMgbGlrZSBkaXZpc2lvbiBieSB6ZXJvIG9yIHNxdWFyZSByb290IG9mIGEgbmVnYXRpdmUgbnVtYmVyLgogKiAgKipTaW5nbGUtUGFnZSBBcHBsaWNhdGlvbiAqKjogQWxsIGNvZGUgKEhUTUwsIENTUywgSmF2YVNjcmlwdCkgaXMgaGVsZCB3aXRoaW4gYSBzaW5nbGUgSFRNTCBmaWxlIGZvciBlYXN5IGRlcGxveW1lbnQuCgoyIyBIb3cgdG8gVXNlCgoxLiAgKipFbnRlciBOdW1iZXJzKio6IENsaWNrIHRoZSBudW1iZXIgYnV0dG9ucyAoMC05KSB0byBpbnB1dCB5b3VyIGRlc2lyZWQgbnVtYmVycy4KMi4gICoqU2VsZWN0IE9wZXJhdGlvbiAqKjogQ2xpY2sgb24gdGhlIG9wZXJhdG9yIGJ1dHRvbnMgKCsuLCAtLCAuLCAuKSAudG8gY2hvb3NlIHlvdXIgYXJpdGhtZXRpYyBvcGVyYXRpb24uCjMuICAgKipQZXJmb3JtIFNxdWFyZSBSb290Kio6IENsaWNrIHRoZSAi4oiaIiBidXR0b24gdG8gY2FsY3VsYXRlIHRoZSBzcXVhcmUgcm9vdCBvZiB0aGUgY3VycmVudCBudW1iZXIuCjQuICAgKipBcHBsjCBQZXJjZW50YWdlKio6IENsaWNrIHRoZSAiJSIgYnV0dG9uLiBJZiBhbiBvcGVyYXRpb24gaXMgcGVuZGluZyAoZS5nLiBgMTAwICsgMTBgKSwgaXQgY2FsY3VsYXRlcyB0aGUgcGVyY2VudGFnZSBvZiB0aGUgZmlyc3QgbnVtYmVyIChgMTAlIG9mIDEwMGApLiBJZiBubyBvcGVyYXRpb24gaXMgcGVuZGluZywgaXQgY29udmVydHMgdGhlIGN1cnJlbnQgbnVtYmVyIHRvIGl0cyBkZWNpbWFsIHBlcmNlbnRhZ2UgKGA1MCUgYmVjb21lcyAwLjVgKS4KNS4gICoqQ2FsY3VsYXRlIFJlc3VsdCoqOiBDbGljayB0aGUgIj0iIGJ1dHRvbiB0byBzZWUgdGhlIHJlc3VsdCBvZiB5b3VyIGNhbGN1bGF0aW9uLgo2LiAgKipDbGVhciBEaXNwbGF5Kio6IFVzZSB0aGUgIkMiIGJ1dHRvbiB0byBjbGVhciB0aGUgY3VycmVudCBpbnB1dCBhbmQgZnVsbHkgcmVzZXQgdGhlIGNhbGN1bGF0b3IuCjcuICAgKipEZWxldGUgTGFzdCBEaWdpdCoqOiBVc2UgdGhlICJERUwiIGJ1dHRvbiB0byByZW1vdmUgdGhlIGxhc3QgZW50ZXJlZCBkaWdpdC4KOC4gICoqRGVjaW1hbCBJbnB1dCoqOiBVc2UgdGhlICIuIiBidXR0b24gdG8gYWRkIGEgZGVjaW1hbCBwb2ludCB0byB5b3VyIG51bWJlcnMuCgoyKipFeGFtcGxlczpqKioKKiAgYDggKyAzID1gIHdpbGwgd2lsbCBkaXNwbGF5IGAxMWAKKiAgYDEwIOQgMCA9YCB3aWxsIGRpc3BsYXkgYEVycm9yYAogKiAgYDcgLSAyID1gIHdpbGwgd2lsbCBkaXNwbGF5IGA1YAogKiAgYDQg4CA2ID1gIHdpbGwgd2lsbCBkaXNwbGF5IGAyNAogKiAgYDggKyA9YCB3aWxsIGRpc3BsYXkgYDE2YCAocmVwZWF0cyB0aGUgbGFzdCBvcGVyYW5kIGZvciBzdWJzZXF1ZW50IGNhbGN1bGF0aW9ucykKKiAgYDggKyAzIOAgPSA+YCB3aWxsIGRpc3BsYXkgYDY0YCAoZXZhbHVhdGVzIGAoOCszKSAqICg4KzMpYCBhcyBpdCByZXBlYXRzIHRoZSBsYXN0IG9wZXJhbmQgZm9yIHRoZSBzdWJzZXF1ZW50IGNhbGN1bGF0aW9ucykKKiAgYDI1IOKiaCB3aWxsIGRpc3BsYXkgYDUgYAoqICAxMDAgKyAxMCAlID0gYCB3aWxsIGRpc3BsYXkgYDEwMCsgMTAlIG9mIDEwMCkgPSBgMTEwYAoqICA1MCAlYCB3aWxsIGRpc3BsYXkgYDAuNWAKCiMjIERldmVsb3BtZW50CgpUaGlzIGFwcGxpY2F0aW9uIGlzIGJ1aWx0IHVzaW5nIHN0YW5kYXJkIHdlYiB0ZWNobm9sb2dpZXM6IEhUTUwsIENTUywgYW5kIEphdmFTY3JpcHQuIEl0IGlzIGRlc2lnbmVkIGFzIGEgc2luZ2xlLCBzZWxmLWNvbnRhaW5lZCBIVE1MIGZpbGUgZm9yIG1heGltdW0gcG9ydGabiWxpdHkgYW5kIGVhc2Ugb2YgZGVwbG95bWVudC4KCjIjIExpY2Vuc2UKClRoaXMgcHJvamVjdCBpcyBvcGVuLXNvdXJjZSBhbmQgYXZhaWxhYmxlIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4K" type="text/markdown">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -72,12 +72,12 @@
             transform: scale(0.98);
         }
 
-        .button.operator, .button.equals {
+        .button.operator, .button.equals, .button.special-operator {
             background-color: #ff9500;
             color: #ffffff;
         }
 
-        .button.operator:hover, .button.equals:hover {
+        .button.operator:hover, .button.equals:hover, .button.special-operator:hover {
             background-color: #e08500;
         }
 
@@ -97,9 +97,7 @@
             background-color: #e0b000;
         }
 
-        .button.clear {
-            grid-column: span 2;
-        }
+        /* Adjusting button spans for new layout */
         .button.equals {
             grid-column: span 2;
         }
@@ -111,19 +109,25 @@
         <div class="buttons">
             <button class="button clear" onclick="clearDisplay()">C</button>
             <button class="button delete" onclick="deleteLast()">DEL</button>
+            <button class="button special-operator" onclick="handlePercentage()">%</button>
             <button class="button operator" onclick="chooseOperation('/')">÷</button>
+
             <button class="button" onclick="appendNumber('7')">7</button>
             <button class="button" onclick="appendNumber('8')">8</button>
             <button class="button" onclick="appendNumber('9')">9</button>
             <button class="button operator" onclick="chooseOperation('*')">×</button>
+
             <button class="button" onclick="appendNumber('4')">4</button>
             <button class="button" onclick="appendNumber('5')">5</button>
             <button class="button" onclick="appendNumber('6')">6</button>
             <button class="button operator" onclick="chooseOperation('-')">-</button>
+
             <button class="button" onclick="appendNumber('1')">1</button>
             <button class="button" onclick="appendNumber('2')">2</button>
             <button class="button" onclick="appendNumber('3')">3</button>
             <button class="button operator" onclick="chooseOperation('+')">+</button>
+
+            <button class="button special-operator" onclick="handleSquareRoot()">√</button>
             <button class="button" onclick="appendNumber('0')">0</button>
             <button class="button" onclick="appendDecimal()">.</button>
             <button class="button equals" onclick="calculate()">=</button>
@@ -188,11 +192,12 @@
         }
 
         function calculate() {
-            if (previousInput === '' || operator === '') {
+            if (previousInput === '' && operator === '') {
+                // If only a number is on display and '=' is pressed, do nothing or show current number
                 return;
             }
 
-            // If currentInput is '0' or empty, use previousInput as the second operand (e.g., 5 + = -> 10)
+            // If currentInput is '0' or empty after an operator, use previousInput as the second operand (e.g., 5 + = -> 10)
             const currentOperand = (currentInput === '0' || currentInput === '') ? previousInput : currentInput;
 
             const prev = parseFloat(previousInput);
@@ -229,10 +234,56 @@
             
             // Limit decimal places to avoid floating point inaccuracies and long numbers
             currentInput = parseFloat(calculation.toFixed(10)).toString(); 
-            previousInput = '';
+            previousInput = ''; // Reset previous for next operation
+            operator = '';      // Reset operator
+            resultDisplayed = true;
+            updateDisplay();
+        }
+
+        function handleSquareRoot() {
+            if (currentInput === 'Error') {
+                clearDisplay(); // Clear error state
+                return;
+            }
+            let val = parseFloat(currentInput);
+            if (isNaN(val) || val < 0) {
+                currentInput = 'Error';
+            } else {
+                currentInput = parseFloat(Math.sqrt(val).toFixed(10)).toString();
+            }
+            previousInput = ''; // Clear any pending operation
             operator = '';
             resultDisplayed = true;
             updateDisplay();
+        }
+
+        function handlePercentage() {
+            if (currentInput === 'Error') {
+                clearDisplay(); // Clear error state
+                return;
+            }
+            let val = parseFloat(currentInput);
+            if (isNaN(val)) {
+                currentInput = 'Error';
+                updateDisplay();
+                return;
+            }
+
+            if (previousInput !== '' && operator !== '') {
+                // If an operation is pending (e.g., 100 + 10%), calculate percentage of previousInput
+                let prevVal = parseFloat(previousInput);
+                let percentageAmount = (prevVal * val / 100);
+                currentInput = percentageAmount.toString();
+                // Now, call calculate to complete the original operation with the percentage amount
+                calculate();
+            } else {
+                // If no operation is pending (e.g., 50%), convert currentInput to its decimal percentage
+                currentInput = parseFloat((val / 100).toFixed(10)).toString();
+                previousInput = ''; // Clear any pending operation
+                operator = '';
+                resultDisplayed = true;
+                updateDisplay();
+            }
         }
 
         function clearDisplay() {
@@ -248,7 +299,7 @@
                 clearDisplay();
                 return;
             }
-            if (resultDisplayed) return;
+            if (resultDisplayed) return; // Don't delete from a result
 
             if (currentInput.length > 1 && currentInput !== '0') {
                 currentInput = currentInput.slice(0, -1);
