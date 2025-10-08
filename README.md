@@ -1,32 +1,27 @@
-# Calculator App
+# ✨ Calculator App (xyz789)
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20App-brightgreen?style=for-the-badge&logo=github)](https://22f3000226.github.io/calculator-app-xyz789/)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/22f3000226/calculator-app-xyz789)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+A modern, responsive web-based calculator application designed for both basic arithmetic and advanced operations. This project enhances core calculator functionality by incorporating square root (`√`), percentage (`%`), and a dedicated 'Clear' (C) button for an improved user experience. It aims to provide a robust and intuitive tool for everyday calculations.
 
----
+## 🚀 Live Demo
 
-## 1. Project Title and Brief Description
+Experience the calculator live:
+[**Live Demo**](https://22f3000226.github.io/calculator-app-xyz789/)
 
-**Calculator App** is a simple, user-friendly web application designed to perform basic arithmetic operations. It provides a clean and intuitive interface for quick calculations, supporting addition, subtraction, multiplication, and division. This project aims to demonstrate fundamental web development skills using HTML, CSS, and JavaScript.
+## ✨ Features
 
----
+This calculator application offers a comprehensive set of functionalities:
 
-## 2. Features/Functionality Overview
+*   **Basic Arithmetic Operations:** Perform addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`).
+*   **Square Root (√):** Calculate the square root of any positive number.
+*   **Percentage (%):** Execute percentage-based calculations, useful for discounts, taxes, or finding a percentage of a number.
+*   **Clear (C):** A dedicated button to reset the calculator, clearing all input and results for a fresh start.
+*   **Decimal Point Support:** Handle non-integer numbers with precision.
+*   **Chained Operations:** Perform multiple operations sequentially (e.g., `5 + 3 * 2`).
+*   **Responsive Design:** Adapts seamlessly to various screen sizes, from mobile devices to desktop monitors.
+*   **User-Friendly Interface:** Clean and intuitive layout for ease of use.
 
-The Calculator App offers the following core features:
+## 🛠️ Setup Instructions
 
-*   **Basic Arithmetic Operations**: Perform addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`).
-*   **Number Input**: Buttons for digits 0-9 to input numbers.
-*   **Clear Functionality**: A 'C' button to clear the current input or reset the calculator entirely.
-*   **Equals Button**: An '=' button to compute and display the result of the entered expression.
-*   **User-Friendly Interface**: A clean and easy-to-navigate layout with clearly labeled buttons and a prominent display area for input and results.
-*   **Real-time Display**: Shows the entered numbers and operations as you type, and the final result clearly.
-
----
-
-## 3. Setup Instructions
-
-This is a client-side web application, so setup is straightforward. No backend server or complex dependencies are required.
+This project is a client-side web application and does not require a complex build process or backend setup.
 
 1.  **Clone the repository:**
